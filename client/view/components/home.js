@@ -1,9 +1,11 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     return (
         <div>
-            <div>Homepage</div>
+            <h1>Homepage</h1>
+            <Link to="/userList">Go UserList</Link>
             <button onClick={() => console.log("click me")}>click me</button>
         </div>
     );

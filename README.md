@@ -7,6 +7,9 @@
 **技术**：利用`renderToString`生成HTML字符串，利用express的API渲染出初始页面。  
 再web环境引入client的js。
 
+#### feature/2.0
+**功能**：支持react-router
+**技术**：
 
 
 ## 常见问题
@@ -15,3 +18,6 @@
 
 #### 2. require is undefined
 错误使用了`webpackNodeExternals`。
+
+#### 3. 错误使用了BrowserRouter
+因为BrowserRouter 不能运行于服务端
