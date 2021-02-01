@@ -4,14 +4,18 @@ import {renderToString} from 'react-dom/server'
 import Home from '../client/view/components/home'
 import { StaticRouter } from 'react-router-dom'
 import Routes from "../client/view/Routes";
+import store from "../client/view/store";
+import {Provider} from 'react-redux'
 
 const app = express()
 app.use(express.static("public"))
 app.get("*", (req, res) => {
     const content = renderToString(
-        <StaticRouter>
-            <Routes />
-        </StaticRouter>
+        <Provider store={store}>
+            <StaticRouter location={req.path}>
+                <Routes />
+            </StaticRouter>
+        </Provider>
     )
     const html = `
         <html>
