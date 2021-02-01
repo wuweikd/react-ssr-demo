@@ -9,7 +9,7 @@
 
 #### feature/2.0
 **功能**：支持react-router
-**技术**：
+**技术**：客户端和服务端分别使用`BrowserRouter`和`StaticRouter`,来匹配不同的路由。
 
 
 ## 常见问题
@@ -20,4 +20,4 @@
 错误使用了`webpackNodeExternals`。
 
 #### 3. 错误使用了BrowserRouter
-因为BrowserRouter 不能运行于服务端
+因为BrowserRouter 不能运行于服务端，应该使用无状态的`StaticRouter`。
